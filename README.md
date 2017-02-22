@@ -10,11 +10,11 @@ There is also [sharp-loader](https://www.npmjs.com/package/sharp-loader), but I 
 See the examples below. Please note if you plan to load more than one version of the same image, it is recommended to use a module like [file-loader](https://www.npmjs.com/package/file-loader), to ensure each version of the same image has a different name. Using a hash would work, for example.
 
 ### Example 1
-```
+```js
 {
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.jpg$/,
       use: [
         'file-loader?name=img/[name].[hash:4].[ext]',
         {
@@ -31,7 +31,7 @@ See the examples below. Please note if you plan to load more than one version of
 ```
 
 ### Example 2
-```
+```js
 const url = require('./image.jpg?width=192&height=192');
 ```
 
