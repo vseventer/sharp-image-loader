@@ -32,13 +32,15 @@ const sharp = require('sharp');
 
 // Exports.
 module.exports = function (source, map) {
-  const context = this; // Extract.
+  // Extract.
+  const context = this;
+  const callback = context.async();
 
   // Flag as cacheable.
-  context.cacheable();
+  context.cacheable && context.cacheable();
 
   // Extract config.
-  let config = loaderUtils.getOptions({ query: context.query || '?' });
+  let config = loaderUtils.getOptions(context);
   if (context.resourceQuery) {
     const resourceConfig = loaderUtils.getOptions({ query: context.resourceQuery });
     config = Object.assign({ }, config, resourceConfig);
@@ -47,7 +49,7 @@ module.exports = function (source, map) {
   // Transform the source.
   const transformer = sharp(source);
   transformer.options = Object.assign({ }, transformer.options, config);
-  return transformer.toBuffer(context.async());
+  return transformer.toBuffer(callback);
 };
 
 // Mark as raw.
