@@ -22,6 +22,7 @@ There is also [sharp-loader](https://www.npmjs.com/package/sharp-loader), but I 
   height: -1,
   canvas: 'crop',
   crop: 0,
+  useExifOrientation: false,
   angle: 0,
   rotateBeforePreExtract: false,
   flip: false,
@@ -62,6 +63,7 @@ There is also [sharp-loader](https://www.npmjs.com/package/sharp-loader), but I 
   streamOut: false,
   withMetadata: false,
   withMetadataOrientation: -1,
+  resolveWithObject: false,
   jpegQuality: 80,
   jpegProgressive: false,
   jpegChromaSubsampling: '4:2:0',
@@ -76,6 +78,11 @@ There is also [sharp-loader](https://www.npmjs.com/package/sharp-loader), but I 
   webpLossless: false,
   webpNearLossless: false,
   tiffQuality: 80,
+  tiffCompression: 'jpeg',
+  tiffPredictor: 'none',
+  tiffSquash: false,
+  tiffXres: 1.0,
+  tiffYres: 1.0,
   tileSize: 256,
   tileOverlap: 0
 }

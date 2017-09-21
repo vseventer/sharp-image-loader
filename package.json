@@ -1,6 +1,6 @@
 {
   "name"        : "sharp-image-loader",
-  "version"     : "0.1.0-alpha.1",
+  "version"     : "0.1.0-alpha.2",
   "description" : "Sharp image loader module for webpack.",
   "keywords"    : [ "webpack", "loader", "module", "sharp", "images" ],
   "homepage"    : "https://github.com/vseventer/sharp-image-loader",
@@ -13,15 +13,15 @@
     "pretest" : "semistandard | snazzy"
   },
   "dependencies": {
-    "loader-utils" : "1.0.x",
-    "sharp"        : "0.17.x"
+    "loader-utils" : "1.1.x",
+    "sharp"        : "0.18.x"
   },
   "devDependencies": {
-    "semistandard" : "9.2.x",
-    "snazzy"       : "6.0.x"
+    "semistandard" : "11.0.x",
+    "snazzy"       : "7.0.x"
   },
   "engines": {
     "node"    : ">=6.x",
-    "webpack" : ">=2.2.x"
+    "webpack" : ">=3.6.x"
   }
 }
